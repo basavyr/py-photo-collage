@@ -4,6 +4,8 @@ import numpy as np
 import glob
 from PIL import Image
 
+NEWLINE = '\n'
+
 
 class Img_Importer:
     def __init__(self, path_to_dir):
@@ -16,6 +18,16 @@ class Img_Importer:
         path = self.dir
         list_of_files = [f for f in glob.glob(str(path + '*.png'))]
         return list_of_files
+
+    def Save_Matrix(self, path, matrix):
+        with open(path, 'w') as filer:
+            try:
+                filer.write(str(matrix))
+                filer.write(NEWLINE)
+            except OSError:
+                print('Error while attempting to save the matrix in a file...')
+            finally:
+                pass
 
     @classmethod
     def Import_Image(self, path):
