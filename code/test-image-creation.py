@@ -12,5 +12,12 @@ SIZE = N * M
 X = mat.Creator(M, N)
 
 
-for line in X.CreatePixelMatrix():
-    print(line)
+# for line in X.CreatePixelMatrix():
+#     print(line)
+px = [1, 2, 3]
+
+line = [px for _ in range(3)]
+print(line)
+m = np.array(line)
+
+print(m.reshape((1,9)))
