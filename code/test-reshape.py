@@ -14,5 +14,5 @@ print(mat)
 trunc_mat = m.Truncate(mat, 2, 2)
 print(trunc_mat)
 
-ext_mat = m.Extend(mat, 3, 3)
+ext_mat = m.Extend(mat, 1, 3)
 print(ext_mat)

@@ -3,6 +3,8 @@ import numpy as np
 from numpy import random as rd
 
 
+# source -> https://www.kite.com/python/answers/how-to-extend-a-numpy-array-in-python
+
 class Shaper:
     def __init__(self, n_rows, n_cols):
         self.rows = n_rows
@@ -13,7 +15,7 @@ class Shaper:
     @staticmethod
     def AddRows(matrix, n_rows):
         new_matrix = matrix
-        new_row = np.array([new_matrix[len(new_matrix)-1]])
+        new_row = np.array([new_matrix[len(new_matrix) - 1]])
         for _ in range(n_rows):
             new_matrix = np.append(new_matrix, new_row, 0)
         return new_matrix
